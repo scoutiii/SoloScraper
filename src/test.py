@@ -1,10 +1,11 @@
 import sys
 import os
+import test2
 from selenium import webdriver
 
 
 def main():
-	
+	test2.test_fun()
 
 	print("Hallo Verden!")
 	print("Dir is: " + os.getcwd())
