@@ -4,43 +4,88 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import message_collection
 
 
 # Logs into the phx website
 def login(driver, user_name, password):
 	print("\n")
+	# Gets username and password if needed
+	if user_name is None:
+		user_name = input("Enter Username: ")
+	if password is None:
+		password = input("Enter Password: ")
+
 	print("Attempting Login...")
 	try:
 		driver.find_element_by_id("email").send_keys(user_name)
 		driver.find_element_by_id("password").send_keys(password)
 		driver.find_element_by_name("btn-submit").click()
+		# Checks to see if webpage changes indicating successful login
+		WebDriverWait(driver, 3).until(lambda driver: driver.current_url == "https://phx.gosolo.io/")
 	except:
 		print("Login failed\n")
+		return False
 	print("Login successful")
 	print("\n")
+	return True
+
 
 # Sets up the driver
 def init_driver(driver_path, url, wait):
-	print("\nInitializing driver\n")
-	driver = webdriver.Chrome(driver_path)
-	driver.implicitly_wait(wait)
-	driver.get(url)
+	try:
+		print("\nInitializing driver\n")
+		driver = webdriver.Chrome(driver_path)
+		driver.implicitly_wait(wait)
+		driver.set_page_load_timeout(wait)
+		driver.get(url)
+	except:
+		print("Something failed while initializing the driver!")
+		return False
 	return(driver)
+
+
+# Prints help menu with commands
+def help():
+	print("\nCommand options:\n")
+	print("-h or --help :")
+	print("\tPrints this help message")
+	print("-d :")
+	print("\tThe path to a chrome driver, default is Scout's driver path")
+	print("-u :")
+	print("\tUsername to log into solo, if not given you will be asked to later")
+	print("-p :")
+	print("\tPassword to log into solo, if not given you will be asked for it later")
+	print("-s :")
+	print("\tThe url where the driver will start, defaults to the phx login page")
+	print("-w :")
+	print("\tThe implicit wait time and page wait time for driver, default is 10 seconds")
+	print("-i :")
+	print("\tThe path to the file for input, if one is not defined you will be asked for one")
+	print("-o :")
+	print("\tThe path or name for the output filt, default is to 'out_put.txt'")
 
 
 # The main function which starts the scraper
 def main():
+	# Checks for help command
+	if len(sys.argv) >= 2:
+		if sys.argv[1] == "-h" or sys.argv[1] == "--help":
+			help()
+			return
 	# If there is not an even number of args (excluding first arg), it terminates
 	if (len(sys.argv)-1) % 2 == 1:
 		print("Wrong number of arguments.")
 		return
 
 	# Sets defaults based on Scout Jarman's computer
-	driver_path = "D:\downloads\solo\WebScraper\SoloScraper\src\drivers\chromedriver.exe"
-	user_name = "scout@gosolo.io"
-	password = "W8fa7p5m"
+	driver_path = "D:\downloads\solo\SoloScraper\src\drivers\chromedriver.exe"
+	user_name = None
+	password = None
 	url = "https://phx.gosolo.io/login"
 	wait = 10
+	file_in = None
+	file_out = "out_put.txt"
 
 	# Goes through and sets given arguments
 	for i in range(1,len(sys.argv),2):
@@ -63,17 +108,23 @@ def main():
 		# Time in seconds for implicit waiting for driver
 		elif option == "-w":
 			wait = argument
-
-
-	# print("Driver:    " + driver_path)
-	# print("User Name: " + user_name)
-	# print("Password:  " + password)
+		# sets the file for input
+		elif option == "-i":
+			file_in = argument
+		# sets the output file
+		elif option == "-o":
+			file_out = argument
 
 	# initializes the scraper
 	driver = init_driver(driver_path, url, wait)
-	login(driver, user_name, password)
+	if driver is False:
+		return
+	if login(driver, user_name, password) is False:
+		return
 
 	input("Click Anything to End")
 
+
+# classic way to use a main function for python
 if __name__ == "__main__":
 	main()
