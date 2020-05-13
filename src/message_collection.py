@@ -1,4 +1,5 @@
-from random import random
+import os
+import csv
 
 def count_job(driver, id):
 	url = "https://phx.gosolo.io/proposal-admin/" + id
@@ -21,6 +22,9 @@ def count_job(driver, id):
 	return entry
 
 def run(driver, file_in, file_out):
+	print("\nStarting message routine...\n")
+	if file_in is None:
+		file_in = input("Need an input file (path or name): ")
 	f_in = open(file_in, "r")
 	f_ut = open(file_out, "w")
 	# Defines headers for file

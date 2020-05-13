@@ -5,6 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import message_collection
+import work_time
 
 
 # Logs into the phx website
@@ -42,7 +43,9 @@ def init_driver(driver_path, url, wait):
 		driver.maximize_window()
 	except:
 		print("Something failed while initializing the driver!")
+		print("\n")
 		return False
+	print("\n")
 	return(driver)
 
 
@@ -66,8 +69,10 @@ def help():
 	print("-o :")
 	print("\tThe path or name for the output filt, default is to 'out_put.txt'")
 	print("-r :")
-	print("\tThe routine you want to run, current options are:")
+	print("\tThe routine you want to run (defaults to work_time, current options are:")
 	print("\t\tmessage : takes a list of jobs to look at, and collects info on the messages")
+	print("\t\twork_time : takes a list of cutomer ids, and determins work times")
+	print("\n")
 
 
 # The main function which starts the scraper
@@ -90,7 +95,7 @@ def main():
 	wait = 10
 	file_in = None
 	file_out = "out_put.txt"
-	routine = "message"
+	routine = "work_time"
 
 	# Goes through and sets given arguments
 	for i in range(1,len(sys.argv),2):
@@ -131,10 +136,12 @@ def main():
 		return
 	if routine == "message":
 		message_collection.run(driver, file_in, file_out)
+	elif routine == "work_time":
+		work_time.run(driver, file_in, file_out)
 
-	input("Click Anything to End")
 
 
 # classic way to use a main function for python
 if __name__ == "__main__":
 	main()
+
