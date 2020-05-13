@@ -39,6 +39,7 @@ def init_driver(driver_path, url, wait):
 		driver.implicitly_wait(wait)
 		driver.set_page_load_timeout(wait)
 		driver.get(url)
+		driver.maximize_window()
 	except:
 		print("Something failed while initializing the driver!")
 		return False
@@ -64,6 +65,9 @@ def help():
 	print("\tThe path to the file for input, if one is not defined you will be asked for one")
 	print("-o :")
 	print("\tThe path or name for the output filt, default is to 'out_put.txt'")
+	print("-r :")
+	print("\tThe routine you want to run, current options are:")
+	print("\t\tmessage : takes a list of jobs to look at, and collects info on the messages")
 
 
 # The main function which starts the scraper
@@ -86,6 +90,7 @@ def main():
 	wait = 10
 	file_in = None
 	file_out = "out_put.txt"
+	routine = "message"
 
 	# Goes through and sets given arguments
 	for i in range(1,len(sys.argv),2):
@@ -114,6 +119,9 @@ def main():
 		# sets the output file
 		elif option == "-o":
 			file_out = argument
+		# specifies the routine
+		elif option == "-r":
+			routine = argument
 
 	# initializes the scraper
 	driver = init_driver(driver_path, url, wait)
@@ -121,6 +129,8 @@ def main():
 		return
 	if login(driver, user_name, password) is False:
 		return
+	if routine == "message":
+		message_collection.run(driver, file_in, file_out)
 
 	input("Click Anything to End")
 
