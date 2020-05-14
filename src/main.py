@@ -29,6 +29,7 @@ def login(driver, user_name, password):
 		return False
 	print("Login successful")
 	print("\n")
+	sys.stdout.flush()
 	return True
 
 
@@ -46,6 +47,7 @@ def init_driver(driver_path, url, wait):
 		print("\n")
 		return False
 	print("\n")
+	sys.stdout.flush()
 	return(driver)
 
 
@@ -73,6 +75,7 @@ def help():
 	print("\t\tmessage : takes a list of jobs to look at, and collects info on the messages")
 	print("\t\twork_time : takes a list of cutomer ids, and determins work times")
 	print("\n")
+	sys.stdout.flush()
 
 
 # The main function which starts the scraper
@@ -134,10 +137,14 @@ def main():
 		return
 	if login(driver, user_name, password) is False:
 		return
+	sys.stdout.flush()
 	if routine == "message":
 		message_collection.run(driver, file_in, file_out)
 	elif routine == "work_time":
 		work_time.run(driver, file_in, file_out)
+
+	print("\nEnd program\n")
+	driver.close()
 
 
 
