@@ -131,6 +131,16 @@ def main():
 		elif option == "-r":
 			routine = argument
 
+	print("Driver Path : " + str(driver_path))
+	print("       Wait : " + str(wait))
+	print("        Url : " + str(url))
+	print("    File In : " + str(file_in))
+	print("   File Out : " + str(file_out))
+	print("  User Name : " + str(user_name))
+	print("   Password : " + str(password))
+	print("    Routine : " + str(routine))
+	sys.stdout.flush()
+
 	# initializes the scraper
 	driver = init_driver(driver_path, url, wait)
 	if driver is False:
