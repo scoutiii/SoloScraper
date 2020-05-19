@@ -61,9 +61,18 @@ def create_entries(driver, customer_id):
 
 
 # run functions goes through customers and creates a csv with time worked info
-def run(driver, file_in, file_out):
+def run(driver, file_in, file_out, is_sub):
+
+	if is_sub:
+		print("sub routine")
+		return
+
+	
+
+
 	print("\nStarting work_time routine\n")
 	sys.stdout.flush()
+	driver.minimize_window()
 
 	# opens files and csv files
 	f_in = open(file_in, "r", encoding="utf8")
