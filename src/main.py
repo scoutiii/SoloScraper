@@ -151,9 +151,7 @@ def main():
 	if routine == "message":
 		message_collection.run(driver, file_in, file_out)
 	elif routine == "work_time":
-		work_time.run(driver, file_in, file_out, False)
-	elif routine == "work_time_sub":
-		work_time.run(driver, file_in, file_out, True)
+		work_time.run(driver, file_in, file_out)
 
 	print("\nEnd program\n")
 	driver.close()

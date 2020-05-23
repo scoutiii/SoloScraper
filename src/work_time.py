@@ -9,9 +9,8 @@ from tqdm import tqdm
 
 # Class which has all characteristics of a message
 class message_info:
-	def __init__(self, message, customer_id):
+	def __init__(self, message):
 		self.msg_full = re.sub('[^a-zA-Z0-9 \`\~\!\@\#\$\%\^\&\*\(\)\_\+\-\=\[\{\]\}\\\|\;\:\'\"\,\<\.\>\/\?\\n]*', "", message)
-		self.cid = customer_id
 		reg_res = re.match("([a-zA-Z0-9 -]*) \(([a-zA-Z0-9 ]*)\) - ([a-zA-Z0-9/ :]*)\\n([a-zA-Z0-9 \`\~\!\@\#\$\%\^\&\*\(\)\_\+\-\=\[\{\]\}\\\|\;\:\'\"\,\<\.\>\/\?\\n]*)", self.msg_full)
 		if reg_res is not None:
 			self.name = reg_res.group(1)
@@ -31,10 +30,22 @@ class message_info:
 
 # Class which classifies messages, and determins timings
 class message_timings:
+	def classify_message(self, previous, msg):
+		if previous is None:
+			print("First")
+		else:
+			print("Second")
+
 	def __init__(self, messages, customer_id):
 		self.messages = []
 		for msg in messages:
-			self.messages.append(message_info(msg, customer_id))
+			self.messages.append(message_info(msg))
+		for i in range(len(self.messages)):
+			if i == 0:
+				prev = None
+			else:
+				prev = self.messages[i-1]
+			self.classify_message(prev, self.messages[i])
 
 
 # Takes a customer id and returns a list of every message
@@ -50,10 +61,13 @@ def get_messages(driver, customer_id):
 # Is called first, will return a list of entries to put into the csv
 def create_entries(driver, customer_id):
 	messages = get_messages(driver, customer_id)
+
+	timings = message_timings(messages, customer_id)
+
 	messages_info = []
 	for msg in messages:
-		msg_info = message_info(msg, customer_id)
-		entry = {"ID":msg_info.cid, "NAME":msg_info.name, "TITLE":msg_info.title,
+		msg_info = message_info(msg)
+		entry = {"NAME":msg_info.name, "TITLE":msg_info.title,
 				 "DATE":msg_info.date, "MSG":msg_info.msg}
 		messages_info.append(entry)
 	return(messages_info)
@@ -61,15 +75,7 @@ def create_entries(driver, customer_id):
 
 
 # run functions goes through customers and creates a csv with time worked info
-def run(driver, file_in, file_out, is_sub):
-
-	if is_sub:
-		print("sub routine")
-		return
-
-	
-
-
+def run(driver, file_in, file_out):
 	print("\nStarting work_time routine\n")
 	sys.stdout.flush()
 	driver.minimize_window()
@@ -78,7 +84,7 @@ def run(driver, file_in, file_out, is_sub):
 	f_in = open(file_in, "r", encoding="utf8")
 	f_ut = open(file_out, "w")
 	csv_in = csv.DictReader(f_in)
-	csv_ut = csv.DictWriter(f_ut, ["ID","NAME", "TITLE", "DATE", "MSG"])
+	csv_ut = csv.DictWriter(f_ut, ["NAME", "TITLE", "DATE", "MSG"])
 	csv_ut.writeheader()
 
 	# Gets all ids first, so that we can have a progress bar
