@@ -9,7 +9,7 @@ import work_time
 
 
 # Logs into the phx website
-def login(driver, user_name, password):
+def login(driver, user_name, password, wait):
 	print("\n")
 	# Gets username and password if needed
 	if user_name is None:
@@ -23,7 +23,7 @@ def login(driver, user_name, password):
 		driver.find_element_by_id("password").send_keys(password)
 		driver.find_element_by_name("btn-submit").click()
 		# Checks to see if webpage changes indicating successful login
-		WebDriverWait(driver, 3).until(lambda driver: driver.current_url == "https://phx.gosolo.io/")
+		WebDriverWait(driver, wait).until(lambda driver: driver.current_url == "https://phx.gosolo.io/")
 	except:
 		print("Login failed\n")
 		return False
@@ -38,12 +38,18 @@ def init_driver(driver_path, url, wait):
 	try:
 		print("\nInitializing driver\n")
 		driver = webdriver.Chrome(driver_path)
+		print("webdriver")
 		driver.implicitly_wait(wait)
+		print("wait")
 		driver.set_page_load_timeout(wait)
+		print("timeout")
 		driver.get(url)
+		print("url")
 		driver.maximize_window()
+		print("maximize")
 	except:
 		print("Something failed while initializing the driver!")
+		print(sys.exc_info())
 		print("\n")
 		return False
 	print("\n")
@@ -91,7 +97,7 @@ def main():
 		return
 
 	# Sets defaults based on Scout Jarman's computer
-	driver_path = "D:\downloads\solo\SoloScraper\src\drivers\chromedriver.exe"
+	driver_path = "D:\downloads\solo\SoloScraper\src\drivers\chromedriver83.exe"
 	user_name = None
 	password = None
 	url = "https://phx.gosolo.io/login"
@@ -145,7 +151,7 @@ def main():
 	driver = init_driver(driver_path, url, wait)
 	if driver is False:
 		return
-	if login(driver, user_name, password) is False:
+	if login(driver, user_name, password, wait) is False:
 		return
 	sys.stdout.flush()
 	if routine == "message":

@@ -11,14 +11,15 @@ from tqdm import tqdm
 class message_info:
 	def __init__(self, message):
 		self.msg_full = re.sub('[^a-zA-Z0-9 \`\~\!\@\#\$\%\^\&\*\(\)\_\+\-\=\[\{\]\}\\\|\;\:\'\"\,\<\.\>\/\?\\n]*', "", message)
-		reg_res = re.match("([a-zA-Z0-9 -]*) \(([a-zA-Z0-9 ]*)\) - ([a-zA-Z0-9/ :]*)\\n([a-zA-Z0-9 \`\~\!\@\#\$\%\^\&\*\(\)\_\+\-\=\[\{\]\}\\\|\;\:\'\"\,\<\.\>\/\?\\n]*)", self.msg_full)
+		reg_res = re.match("([a-zA-Z0-9 -']*) \(([a-zA-Z0-9 ]*)\) - ([a-zA-Z0-9/ :]*)\\n([a-zA-Z0-9 \`\~\!\@\#\$\%\^\&\*\(\)\_\+\-\=\[\{\]\}\\\|\;\:\'\"\,\<\.\>\/\?\\n]*)", self.msg_full)
 		if reg_res is not None:
 			self.name = reg_res.group(1)
-			self.title = reg_res.group(2)
+			self.title = reg_res.group(2).lower()
 			self.date = datetime.strptime(reg_res.group(3), "%m/%d/%Y %H:%M")
 			self.msg = reg_res.group(4)
 			self.type = "Other"
 			self.sub_type = "Other"
+			self.time = "Non"
 		else:
 			self.name = "NA"
 			self.title = "NA"
@@ -26,15 +27,20 @@ class message_info:
 			self.msg = "NA"
 			self.type = "NA"
 			self.sub_type = "NA"
+			self.time = "NA"
 
 
 # Class which classifies messages, and determins timings
 class message_timings:
+
 	def classify_message(self, previous, msg):
-		if previous is None:
-			print("First")
-		else:
-			print("Second")
+		# TYPE: request, create
+		if msg.msg.find("New customer created successfully") != -1:
+			msg.type = "Request"
+			msg.sub_type = "Create"
+		# TYPE: request, answer
+		if msg.title.find("proposalist") != -1:
+			return
 
 	def __init__(self, messages, customer_id):
 		self.messages = []
@@ -42,7 +48,7 @@ class message_timings:
 			self.messages.append(message_info(msg))
 		for i in range(len(self.messages)):
 			if i == 0:
-				prev = None
+				prev = message_info("")
 			else:
 				prev = self.messages[i-1]
 			self.classify_message(prev, self.messages[i])
@@ -60,10 +66,11 @@ def get_messages(driver, customer_id):
 
 # Is called first, will return a list of entries to put into the csv
 def create_entries(driver, customer_id):
+	# Gets notes section for the cutomer
 	messages = get_messages(driver, customer_id)
-
+	# Processes messages to get timings
 	timings = message_timings(messages, customer_id)
-
+	# Creates dict entries to write out to the csv
 	messages_info = []
 	for msg in messages:
 		msg_info = message_info(msg)
