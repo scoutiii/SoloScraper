@@ -11,7 +11,7 @@ from tqdm import tqdm
 class message_info:
 	def __init__(self, message):
 		self.msg_full = re.sub('[^a-zA-Z0-9 \`\~\!\@\#\$\%\^\&\*\(\)\_\+\-\=\[\{\]\}\\\|\;\:\'\"\,\<\.\>\/\?\\n]*', "", message)
-		reg_res = re.match("([a-zA-Z0-9 -']*) \(([a-zA-Z0-9 ]*)\) - ([a-zA-Z0-9/ :]*)\\n([a-zA-Z0-9 \`\~\!\@\#\$\%\^\&\*\(\)\_\+\-\=\[\{\]\}\\\|\;\:\'\"\,\<\.\>\/\?\\n]*)", self.msg_full)
+		reg_res = re.match("(.*) \((.*)\) - (.*)\\n(.*)", self.msg_full)
 		if reg_res is not None:
 			self.name = reg_res.group(1)
 			self.title = reg_res.group(2).lower()
@@ -32,18 +32,81 @@ class message_info:
 
 # Class which classifies messages, and determins timings
 class message_timings:
+	# Lists of notable titles
+	props_titles = ["proposalist", "junior proposalist", "senior proposalist"]
+	QA_titles = ["proposal qa", "super admin"]
 
+	# Takes a message and its prior to determine what type it is
 	def classify_message(self, previous, msg):
+		# Finds time type
+		if msg.msg.find("URGENT CHECKED") != -1:
+			msg.time = "Real"
+		elif previous.time == "NA":
+			msg.time = "Standard"
+		else:
+			msg.time = previous.time
+
+		# Checks for easy to catch note types
+
+		# END NOTES:
+		# TYPE: end, archive
+		if msg.msg.find("Customer Archived") != -1:
+			msg.type = "End"
+			msg.sub_type = "Archive"
+			msg.time = "Standard"
+			return
+		# TYPE: end, QA
+		if msg.msg.find("Proposal(s) Completed and needs QA") != -1:
+			msg.type = "End"
+			msg.sub_type = "Archive"
+			msg.time = "Standard"
+			return
+		# TYPE: end, sent
+		if msg.msg.find("New Proposal") != -1:
+			msg.type = "End"
+			msg.sub_type = "Sent"
+			msg.time = "Standard"
+			return
+
+		# REJECTION NOTES:
+		# TYPE: rejection, rejection
+		if msg.msg.find("Proposal Rejected for") != -1:
+			msg.type = "Rejection"
+			msg.sub_type = "Rejected"
+			return
+
+		# RESPONSE NOTES:
+		# TYPE: response, prop Response
+		if msg.title in message_timings.props_titles:
+			msg.type = "Response"
+			msg.sub_type = "Prop Response"
+			return
+		# TYPE: response, QA Response
+		if msg.title in message_timings.QA_titles:
+			msg.type = "Response"
+			msg.sub_type = "QA Response"
+			return
+
+		# REQUEST NOTES:
 		# TYPE: request, create
 		if msg.msg.find("New customer created successfully") != -1:
 			msg.type = "Request"
 			msg.sub_type = "Create"
-		# TYPE: request, answer
-		if msg.title.find("proposalist") != -1:
 			return
+		# TYPE (DEFAULT): request, other
+		msg.type = "Request"
+		msg.sub_type = "Other"
+		return
 
+	# Goes through the series of classified messages, and determines if there are any work time events
+	def get_entries(self):
+		return
+
+
+	# Takes a list series of messages and classifies them
 	def __init__(self, messages, customer_id):
 		self.messages = []
+		self.customer_id = customer_id
 		for msg in messages:
 			self.messages.append(message_info(msg))
 		for i in range(len(self.messages)):
@@ -70,6 +133,7 @@ def create_entries(driver, customer_id):
 	messages = get_messages(driver, customer_id)
 	# Processes messages to get timings
 	timings = message_timings(messages, customer_id)
+	entries = timings.get_entries()
 	# Creates dict entries to write out to the csv
 	messages_info = []
 	for msg in messages:
