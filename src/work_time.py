@@ -100,7 +100,58 @@ class message_timings:
 
 	# Goes through the series of classified messages, and determines if there are any work time events
 	def get_entries(self):
-		return
+		entries = []
+		start = None
+		end = None
+		target = None
+
+		i = 0
+		while i < len(self.messages):
+			msg = self.messages[i]
+			if start is None:
+				if msg.type == "Request":
+					start = msg
+					target = "Response"
+				elif msg.type == "Response":
+					start = msg
+					target = "End"
+				elif msg.type == "Rejection":
+					start = msg
+					tartget = "End"
+			else:
+				if msg.type == target:
+					end = msg
+					entries.append(self.__create_entry__(start, end))
+					if start.type == "Response":
+						start = end = target = None
+						continue
+					start = end = target = None
+			i += 1
+
+		return(entries)
+
+
+	# Takes a start and end and creates a work time event
+	def __create_entry__(self, start, end):
+		if start.type == "Request" and end.type == "Response":
+			type = "Queue Time"
+		elif start.type == "Response" and end.type == "End":
+			type = "Prop Work Time"
+		elif start.type == "Rejection" and end.type == "End":
+			type = "Rejection Work Time"
+		else:
+			type = "Other"
+
+		diff = end.date - start.date
+		work_time = divmod(diff.total_seconds(), 60)[0]
+		time = start.time
+		name = end.name
+		title = end.title
+		id = self.customer_id
+		date = end.date.date()
+		entry = {"Type":type, "Name":name, "Title":title, "Work_Time":work_time,
+				 "Time_Type":time, "Date":date, "Customer_Id":id}
+		return(entry)
 
 
 	# Takes a list series of messages and classifies them
@@ -134,14 +185,7 @@ def create_entries(driver, customer_id):
 	# Processes messages to get timings
 	timings = message_timings(messages, customer_id)
 	entries = timings.get_entries()
-	# Creates dict entries to write out to the csv
-	messages_info = []
-	for msg in messages:
-		msg_info = message_info(msg)
-		entry = {"NAME":msg_info.name, "TITLE":msg_info.title,
-				 "DATE":msg_info.date, "MSG":msg_info.msg}
-		messages_info.append(entry)
-	return(messages_info)
+	return(entries)
 
 
 
@@ -155,7 +199,7 @@ def run(driver, file_in, file_out):
 	f_in = open(file_in, "r", encoding="utf8")
 	f_ut = open(file_out, "w")
 	csv_in = csv.DictReader(f_in)
-	csv_ut = csv.DictWriter(f_ut, ["NAME", "TITLE", "DATE", "MSG"])
+	csv_ut = csv.DictWriter(f_ut, ["Type", "Name", "Title", "Work_Time", "Time_Type", "Date", "Customer_Id"])
 	csv_ut.writeheader()
 
 	# Gets all ids first, so that we can have a progress bar
