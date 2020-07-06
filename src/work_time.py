@@ -208,6 +208,8 @@ def run(driver, file_in, file_out):
 		customer_ids.add(line["customer_id"])
 
 	# loops through all customer ids, and writes the csv entries
+	customer_ids = list(customer_ids)
+	customer_ids.sort()
 	for customer_id in tqdm(customer_ids):
 		entries = create_entries(driver, customer_id)
 		csv_ut.writerows(entries)
