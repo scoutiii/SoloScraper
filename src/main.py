@@ -1,5 +1,6 @@
 import sys
 import os
+import random
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -76,6 +77,8 @@ def help():
 	print("\tThe path to the file for input, if one is not defined you will be asked for one")
 	print("-o :")
 	print("\tThe path or name for the output filt, default is to 'out_put.txt'")
+	print("-v :")
+	print("\tSpecify the random seed, default is 42069")
 	print("-r :")
 	print("\tThe routine you want to run (defaults to work_time, current options are:")
 	print("\t\tmessage : takes a list of jobs to look at, and collects info on the messages")
@@ -105,6 +108,7 @@ def main():
 	file_in = None
 	file_out = "out_put.txt"
 	routine = "work_time"
+	seed = 42069
 
 	# Goes through and sets given arguments
 	for i in range(1,len(sys.argv),2):
@@ -136,6 +140,8 @@ def main():
 		# specifies the routine
 		elif option == "-r":
 			routine = argument
+		elif option == "-v":
+			seed = argument
 
 	print("Driver Path : " + str(driver_path))
 	print("       Wait : " + str(wait))
@@ -145,9 +151,11 @@ def main():
 	print("  User Name : " + str(user_name))
 	print("   Password : " + str(password))
 	print("    Routine : " + str(routine))
+	print("       Seed : " + str(seed))
 	sys.stdout.flush()
 
 	# initializes the scraper
+	random.seed(seed)
 	driver = init_driver(driver_path, url, wait)
 	if driver is False:
 		return
