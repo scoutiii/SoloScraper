@@ -117,7 +117,7 @@ class message_timings:
 					target = "End"
 				elif msg.type == "Rejection":
 					start = msg
-					tartget = "End"
+					target = "End"
 			else:
 				if msg.type == target:
 					end = msg
