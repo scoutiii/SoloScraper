@@ -62,7 +62,7 @@ class message_timings:
 			msg.time = "Standard"
 			return
 		# TYPE: end, sent
-		if msg.msg.find("New Proposal") != -1:
+		if msg.msg.find("New Solar Proposal") != -1:
 			msg.type = "End"
 			msg.sub_type = "Sent"
 			msg.time = "Standard"
@@ -148,7 +148,7 @@ class message_timings:
 		name = end.name
 		title = end.title
 		id = self.customer_id
-		date = end.date.date()
+		date = end.date
 		entry = {"Type":type, "Name":name, "Title":title, "Work_Time":work_time,
 				 "Time_Type":time, "Date":date, "Customer_Id":id}
 		return(entry)

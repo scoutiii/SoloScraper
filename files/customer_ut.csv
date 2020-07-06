@@ -1,116 +1,100 @@
 Type,Name,Title,Work_Time,Time_Type,Date,Customer_Id
-Queue Time,Makayla Jenkins,super admin,10.0,Real,2020-05-01,363208
-Queue Time,Makayla Jenkins,super admin,4.0,Real,2020-05-01,363290
-Queue Time,Makayla Jenkins,super admin,353.0,Real,2020-05-01,363167
-Queue Time,Kiley Young,proposal qa,82.0,Standard,2020-05-01,363510
-Queue Time,Makayla Jenkins,super admin,32.0,Real,2020-05-02,363510
-Prop Work Time,Makayla Jenkins,super admin,0.0,Real,2020-05-02,363510
-Queue Time,Joseph Carlile,proposal qa,0.0,Real,2020-05-01,364195
-Queue Time,Sydney Young,proposal qa,90.0,Standard,2020-04-30,362623
-Queue Time,Devin McEwan,proposalist,1.0,Real,2020-05-01,362623
-Prop Work Time,Tyler Beaujeu,cad manager,58.0,Standard,2020-05-01,362623
-Prop Work Time,Tristin Hofheins,proposal qa,13.0,Standard,2020-05-01,362623
-Prop Work Time,Anna Shepherdson,senior proposalist,24676.0,Standard,2020-05-18,362623
-Queue Time,Makayla Jenkins,super admin,0.0,Real,2020-05-01,363277
-Prop Work Time,Jaycee Hafen,proposal qa,25.0,Standard,2020-05-01,363277
-Prop Work Time,Bailey Lawson,proposal qa,243.0,Standard,2020-05-01,363277
-Queue Time,Isaac Webb,proposal qa,149.0,Standard,2020-04-30,362446
-Queue Time,Makayla Jenkins,super admin,86.0,Real,2020-05-01,362446
-Prop Work Time,Devin McEwan,proposalist,90.0,Standard,2020-05-01,362446
-Queue Time,Kaylee Reid,super admin,4.0,Standard,2020-05-01,363526
-Queue Time,Nathan Van Orman,senior proposalist,17.0,Real,2020-03-06,320508
-Prop Work Time,Nathan Van Orman,senior proposalist,0.0,Real,2020-03-06,320508
-Queue Time,Benjamin Miller,proposal qa,13.0,Real,2020-03-06,320508
-Queue Time,Sydney Young,proposal qa,66.0,Standard,2020-04-30,363079
-Prop Work Time,Sydney Young,proposal qa,0.0,Standard,2020-04-30,363079
-Queue Time,Wesley Musselman,super admin,6.0,Standard,2020-05-01,363079
-Prop Work Time,Mike Hutchings,super admin,4.0,Standard,2020-05-01,363079
-Queue Time,Devin McEwan,proposalist,2.0,Real,2020-05-01,363079
-Queue Time,Annabelle McCrary,proposal qa,2.0,Real,2020-05-01,363079
-Queue Time,Aeon Donahue,super admin,0.0,Standard,2020-05-01,363079
-Queue Time,Makayla Jenkins,super admin,1.0,Real,2020-05-01,363804
-Queue Time,Annabelle McCrary,proposal qa,47.0,Standard,2020-05-01,363343
-Queue Time,Makayla Jenkins,super admin,470.0,Real,2020-05-01,363149
-Queue Time,Kaylee Reid,super admin,5.0,Real,2020-04-30,362625
-Prop Work Time,Kaylee Reid,super admin,0.0,Real,2020-04-30,362625
-Queue Time,Richard Upshaw,proposalist,2.0,Real,2020-04-30,362625
-Prop Work Time,Andrew Porcelli,super admin,90.0,Standard,2020-04-30,362625
-Queue Time,Devin McEwan,proposalist,7.0,Real,2020-05-01,362625
-Prop Work Time,Wesley Musselman,super admin,20.0,Standard,2020-05-01,362625
-Queue Time,Tristin Hofheins,proposal qa,4.0,Real,2020-05-01,362625
-Prop Work Time,Reggie Northrup,proposal qa,564528.0,Standard,2019-07-19,74479
-Prop Work Time,Clay Christofferson,super admin,398911.0,Standard,2020-04-21,74479
-Prop Work Time,Makayla Jenkins,super admin,13896.0,Standard,2020-05-01,74479
-Queue Time,Nathan Van Orman,senior proposalist,3.0,Real,2020-05-01,364171
-Queue Time,Makayla Jenkins,super admin,391.0,Real,2020-05-01,363164
-Queue Time,Makayla Jenkins,super admin,4.0,Real,2020-05-01,363793
-Queue Time,Makayla Jenkins,super admin,7.0,Real,2020-05-01,363191
-Queue Time,McKenzie Miller,super admin,176.0,Standard,2020-04-30,362925
-Queue Time,Makayla Jenkins,super admin,1.0,Real,2020-05-01,362925
-Queue Time,Makayla Jenkins,super admin,1.0,Real,2020-05-01,363213
-Queue Time,Aaron Larsen,proposal qa,183.0,Standard,2020-04-30,362892
-Queue Time,Makayla Jenkins,super admin,3.0,Real,2020-05-01,362892
-Queue Time,Alandra Finneman,super admin,48.0,Standard,2020-05-01,363404
-Prop Work Time,Hyrum Parkin,proposalist,42.0,Standard,2020-05-01,363404
-Queue Time,Braedan Beecher,super admin,86.0,Standard,2020-05-01,363600
-Queue Time,Devin McEwan,proposalist,2.0,Real,2020-05-02,363600
-Prop Work Time,Devin McEwan,proposalist,1.0,Real,2020-05-02,363600
-Queue Time,Devin McEwan,proposalist,8.0,Real,2020-05-02,363600
-Queue Time,Makayla Jenkins,super admin,2.0,Real,2020-05-02,363600
-Prop Work Time,Kasaundra Porcelli,proposal qa,17.0,Standard,2020-05-02,363600
-Queue Time,Makayla Jenkins,super admin,73.0,Real,2020-05-01,363172
-Queue Time,Cody Wheeler,proposal qa,82.0,Real,2020-05-01,363175
-Queue Time,Makayla Jenkins,super admin,3.0,Real,2020-05-01,363809
-Queue Time,Annabelle McCrary,proposal qa,22.0,Standard,2020-05-01,363217
-Queue Time,Makayla Jenkins,super admin,396.0,Real,2020-05-01,363162
-Queue Time,Makayla Jenkins,super admin,457.0,Real,2020-05-01,363157
-Queue Time,Makayla Jenkins,super admin,11.0,Real,2020-05-01,363186
-Queue Time,Alandra Finneman,super admin,50.0,Standard,2020-05-01,363179
-Queue Time,Makayla Jenkins,super admin,12.0,Real,2020-05-01,363179
-Prop Work Time,Kasaundra Porcelli,proposal qa,20.0,Standard,2020-05-01,363179
-Queue Time,Makayla Jenkins,super admin,7.0,Real,2020-05-01,363301
-Queue Time,Makayla Jenkins,super admin,314.0,Real,2020-05-01,363169
-Prop Work Time,Kaylee Reid,super admin,5.0,Standard,2020-05-01,363740
-Queue Time,Joseph Carlile,proposal qa,2.0,Standard,2020-04-30,363113
-Queue Time,Joseph Carlile,proposal qa,1.0,Standard,2020-04-30,363113
-Prop Work Time,Joseph Carlile,proposal qa,0.0,Standard,2020-04-30,363113
-Queue Time,Makayla Jenkins,super admin,7.0,Real,2020-05-01,363113
-Prop Work Time,Rylee Johnson,proposalist,19.0,Standard,2020-05-01,363113
-Queue Time,Micah Wilson,proposal qa,241.0,Standard,2020-05-01,363113
-Prop Work Time,Anna Shepherdson,senior proposalist,4318.0,Standard,2020-05-04,363113
-Queue Time,Lydia Carlile,proposal qa,32.0,Standard,2020-04-30,362398
-Queue Time,Makayla Jenkins,super admin,2.0,Real,2020-05-01,362398
-Queue Time,Bailey Lawson,proposal qa,2.0,Real,2020-04-30,362420
-Prop Work Time,Makayla Jenkins,super admin,1068.0,Standard,2020-05-01,362420
-Queue Time,Makayla Jenkins,super admin,4.0,Real,2020-05-01,363782
-Queue Time,Braedan Beecher,super admin,4.0,Real,2020-05-01,363782
-Queue Time,Annabelle McCrary,proposal qa,149.0,Standard,2020-04-30,362454
-Queue Time,Makayla Jenkins,super admin,2.0,Real,2020-05-01,362454
-Queue Time,Kasaundra Porcelli,proposal qa,1.0,Real,2020-04-30,362426
-Prop Work Time,Devin McEwan,proposalist,1167.0,Standard,2020-05-01,362426
-Prop Work Time,Mike Hutchings,super admin,20.0,Standard,2020-05-01,362426
-Queue Time,Devin McEwan,proposalist,3.0,Real,2020-05-01,362426
-Prop Work Time,Mike Hutchings,super admin,0.0,Real,2020-05-01,362426
-Queue Time,Alandra Finneman,super admin,3.0,Real,2020-05-01,362426
-Queue Time,Makayla Jenkins,super admin,3.0,Real,2020-05-01,363247
-Prop Work Time,Wesley Musselman,super admin,9.0,Standard,2020-05-01,363247
-Queue Time,Tristin Hofheins,proposal qa,3.0,Real,2020-05-01,363247
-Queue Time,Makayla Jenkins,super admin,89.0,Standard,2020-05-01,363247
-Queue Time,Wesley Musselman,super admin,336.0,Standard,2020-04-29,361794
-Queue Time,Makayla Jenkins,super admin,961.0,Standard,2020-05-01,361794
-Prop Work Time,Mike Hutchings,super admin,374.0,Standard,2020-05-01,361794
-Queue Time,Tristin Hofheins,proposal qa,1.0,Real,2020-05-01,363432
-Queue Time,Trevor Miller,proposal qa,4.0,Real,2020-05-01,363970
-Prop Work Time,Nathan Van Orman,senior proposalist,127.0,Standard,2020-05-01,363970
-Queue Time,Kaylee Reid,super admin,4.0,Real,2020-04-30,362883
-Prop Work Time,Kaylee Reid,super admin,1.0,Real,2020-04-30,362883
-Queue Time,Kasaundra Porcelli,proposal qa,7.0,Real,2020-04-30,362883
-Prop Work Time,Kasaundra Porcelli,proposal qa,22.0,Standard,2020-04-30,362883
-Queue Time,Tristin Hofheins,proposal qa,12.0,Real,2020-05-01,362883
-Prop Work Time,Kasaundra Porcelli,proposal qa,134.0,Standard,2020-05-01,362883
-Queue Time,Ryan Sturzenegger,senior proposalist,7.0,Standard,2020-04-30,362321
-Prop Work Time,Ryan Sturzenegger,senior proposalist,0.0,Standard,2020-04-30,362321
-Queue Time,Makayla Jenkins,super admin,90.0,Real,2020-05-01,362321
-Prop Work Time,Makayla Jenkins,super admin,0.0,Real,2020-05-01,362321
-Queue Time,Makayla Jenkins,super admin,20.0,Real,2020-05-01,362321
-Queue Time,Nathan Van Orman,senior proposalist,2.0,Real,2020-05-01,364013
+Queue Time,Makayla Jenkins,super admin,396.0,Real,2020-05-01 06:24:00,363162
+Queue Time,Makayla Jenkins,super admin,4.0,Real,2020-05-01 14:28:00,363782
+Queue Time,Makayla Jenkins,super admin,391.0,Real,2020-05-01 06:28:00,363164
+Queue Time,Sydney Young,proposal qa,90.0,Standard,2020-04-30 15:45:00,362623
+Queue Time,Devin McEwan,proposalist,1.0,Real,2020-05-01 11:37:00,362623
+Queue Time,Tristin Hofheins,proposal qa,20.0,Real,2020-05-01 12:49:00,362623
+Queue Time,Clay Christofferson,super admin,3.0,Real,2020-05-18 16:01:00,362623
+Prop Work Time,Anna Shepherdson,senior proposalist,3.0,Real,2020-05-18 16:14:00,362623
+Queue Time,Makayla Jenkins,super admin,3.0,Real,2020-05-01 14:50:00,363809
+Queue Time,James Cox,super admin,1.0,Standard,2020-05-01 15:55:00,363809
+Queue Time,Makayla Jenkins,super admin,7.0,Real,2020-05-01 09:36:00,363301
+Queue Time,Kaylee Reid,super admin,4.0,Real,2020-04-30 16:39:00,362883
+Prop Work Time,Kaylee Reid,super admin,1.0,Real,2020-04-30 16:41:00,362883
+Queue Time,Kasaundra Porcelli,proposal qa,7.0,Real,2020-04-30 16:49:00,362883
+Queue Time,Tristin Hofheins,proposal qa,12.0,Real,2020-05-01 07:38:00,362883
+Queue Time,Kasaundra Porcelli,proposal qa,7.0,Real,2020-05-01 09:53:00,362883
+Queue Time,Tristin Hofheins,proposal qa,1.0,Real,2020-05-01 11:21:00,363432
+Queue Time,Makayla Jenkins,super admin,10.0,Real,2020-05-01 07:48:00,363208
+Prop Work Time,Kaylee Reid,super admin,5.0,Standard,2020-05-01 14:02:00,363740
+Queue Time,Nathan Van Orman,senior proposalist,3.0,Real,2020-05-01 20:28:00,364171
+Queue Time,Makayla Jenkins,super admin,314.0,Real,2020-05-01 06:34:00,363169
+Prop Work Time,Reggie Northrup,proposal qa,564528.0,Standard,2019-07-19 10:58:00,74479
+Queue Time,Clay Christofferson,super admin,5.0,Real,2020-04-21 15:20:00,74479
+Prop Work Time,Clay Christofferson,super admin,3.0,Real,2020-04-21 15:24:00,74479
+Queue Time,Makayla Jenkins,super admin,35.0,Real,2020-05-01 07:01:00,74479
+Queue Time,Makayla Jenkins,super admin,11.0,Real,2020-05-01 07:16:00,363186
+Queue Time,Lydia Carlile,proposal qa,32.0,Standard,2020-04-30 13:03:00,362398
+Queue Time,Makayla Jenkins,super admin,2.0,Real,2020-05-01 09:29:00,362398
+Queue Time,Hyrum Parkin,proposalist,77.0,Standard,2020-05-01 12:17:00,363404
+Queue Time,Devin McEwan,proposalist,1191.0,Standard,2020-05-02 08:44:00,363600
+Prop Work Time,Devin McEwan,proposalist,1.0,Real,2020-05-02 08:47:00,363600
+Queue Time,Devin McEwan,proposalist,8.0,Real,2020-05-02 08:55:00,363600
+Queue Time,Makayla Jenkins,super admin,2.0,Real,2020-05-02 09:03:00,363600
+Queue Time,Kasaundra Porcelli,proposal qa,4.0,Real,2020-05-02 09:27:00,363600
+Queue Time,Makayla Jenkins,super admin,470.0,Real,2020-05-01 06:07:00,363149
+Queue Time,Makayla Jenkins,super admin,1096.0,Standard,2020-05-02 06:25:00,363510
+Prop Work Time,Makayla Jenkins,super admin,0.0,Real,2020-05-02 06:26:00,363510
+Queue Time,Makayla Jenkins,super admin,1174.0,Standard,2020-05-01 08:34:00,362454
+Queue Time,Trevor Miller,proposal qa,4.0,Real,2020-05-01 16:25:00,363970
+Queue Time,Nathan Van Orman,senior proposalist,4.0,Real,2020-05-01 18:39:00,363970
+Queue Time,Makayla Jenkins,super admin,4.0,Real,2020-05-01 09:32:00,363290
+Queue Time,Ryan Sturzenegger,senior proposalist,7.0,Standard,2020-04-30 11:56:00,362321
+Prop Work Time,Ryan Sturzenegger,senior proposalist,0.0,Standard,2020-04-30 11:57:00,362321
+Queue Time,Makayla Jenkins,super admin,90.0,Real,2020-05-01 06:37:00,362321
+Prop Work Time,Makayla Jenkins,super admin,0.0,Real,2020-05-01 06:38:00,362321
+Queue Time,Makayla Jenkins,super admin,20.0,Real,2020-05-01 07:04:00,362321
+Queue Time,Makayla Jenkins,super admin,4.0,Real,2020-05-01 14:35:00,363793
+Queue Time,Makayla Jenkins,super admin,0.0,Real,2020-05-01 09:22:00,363277
+Prop Work Time,Bailey Lawson,proposal qa,243.0,Standard,2020-05-01 13:59:00,363277
+Queue Time,Makayla Jenkins,super admin,974.0,Standard,2020-05-01 09:08:00,362925
+Queue Time,Wesley Musselman,super admin,336.0,Standard,2020-04-29 23:11:00,361794
+Queue Time,Makayla Jenkins,super admin,961.0,Standard,2020-05-01 06:18:00,361794
+Queue Time,Mike Hutchings,super admin,4.0,Real,2020-05-01 12:49:00,361794
+Queue Time,Makayla Jenkins,super admin,3.0,Real,2020-05-01 08:51:00,363247
+Queue Time,Wesley Musselman,super admin,3.0,Real,2020-05-01 09:05:00,363247
+Queue Time,Tristin Hofheins,proposal qa,3.0,Real,2020-05-01 09:17:00,363247
+Queue Time,Makayla Jenkins,super admin,1.0,Real,2020-05-01 14:44:00,363804
+Queue Time,Nathan Van Orman,senior proposalist,17.0,Real,2020-03-06 18:48:00,320508
+Prop Work Time,Nathan Van Orman,senior proposalist,0.0,Real,2020-03-06 18:50:00,320508
+Queue Time,Benjamin Miller,proposal qa,13.0,Real,2020-03-06 19:15:00,320508
+Queue Time,Makayla Jenkins,super admin,88.0,Standard,2020-05-01 07:42:00,363179
+Queue Time,Kasaundra Porcelli,proposal qa,2.0,Real,2020-05-01 08:01:00,363179
+Queue Time,Makayla Jenkins,super admin,7.0,Real,2020-05-01 07:22:00,363191
+Queue Time,Makayla Jenkins,super admin,1030.0,Standard,2020-05-01 09:50:00,362892
+Queue Time,Kasaundra Porcelli,proposal qa,1.0,Real,2020-04-30 12:51:00,362426
+Queue Time,Devin McEwan,proposalist,1.0,Real,2020-05-01 08:25:00,362426
+Queue Time,Mike Hutchings,super admin,1.0,Real,2020-05-01 08:49:00,362426
+Queue Time,Devin McEwan,proposalist,3.0,Real,2020-05-01 08:57:00,362426
+Prop Work Time,Mike Hutchings,super admin,0.0,Real,2020-05-01 08:58:00,362426
+Queue Time,Solo Admin,super admin,79399.0,Real,2020-06-25 12:20:00,362426
+Queue Time,Bailey Lawson,proposal qa,2.0,Real,2020-04-30 12:48:00,362420
+Queue Time,Makayla Jenkins,super admin,71.0,Real,2020-05-01 06:41:00,362420
+Queue Time,Sydney Young,proposal qa,66.0,Standard,2020-04-30 20:26:00,363079
+Prop Work Time,Sydney Young,proposal qa,0.0,Standard,2020-04-30 20:27:00,363079
+Queue Time,Wesley Musselman,super admin,6.0,Standard,2020-05-01 08:32:00,363079
+Queue Time,Mike Hutchings,super admin,3.0,Real,2020-05-01 08:40:00,363079
+Queue Time,Devin McEwan,proposalist,2.0,Real,2020-05-01 08:49:00,363079
+Queue Time,Aeon Donahue,super admin,89.0,Real,2020-05-01 10:19:00,363079
+Queue Time,Makayla Jenkins,super admin,353.0,Real,2020-05-01 06:31:00,363167
+Queue Time,Kaylee Reid,super admin,5.0,Real,2020-04-30 14:21:00,362625
+Prop Work Time,Kaylee Reid,super admin,0.0,Real,2020-04-30 14:25:00,362625
+Queue Time,Richard Upshaw,proposalist,2.0,Real,2020-04-30 14:35:00,362625
+Queue Time,Devin McEwan,proposalist,7.0,Real,2020-05-01 09:37:00,362625
+Queue Time,Wesley Musselman,super admin,3.0,Real,2020-05-01 10:06:00,362625
+Prop Work Time,Wesley Musselman,super admin,0.0,Real,2020-05-01 10:07:00,362625
+Queue Time,Tristin Hofheins,proposal qa,4.0,Real,2020-05-01 10:13:00,362625
+Queue Time,Makayla Jenkins,super admin,1060.0,Standard,2020-05-01 06:38:00,362446
+Queue Time,Devin McEwan,proposalist,3.0,Real,2020-05-01 08:27:00,362446
+Queue Time,Joseph Carlile,proposal qa,2.0,Standard,2020-04-30 20:36:00,363113
+Queue Time,Joseph Carlile,proposal qa,1.0,Standard,2020-04-30 20:37:00,363113
+Prop Work Time,Joseph Carlile,proposal qa,0.0,Standard,2020-04-30 20:40:00,363113
+Queue Time,Makayla Jenkins,super admin,7.0,Real,2020-05-01 09:39:00,363113
+Queue Time,Rylee Johnson,proposalist,1.0,Real,2020-05-01 10:08:00,363113
+Queue Time,Kaylee Reid,super admin,4.0,Standard,2020-05-01 12:23:00,363526
+Queue Time,Makayla Jenkins,super admin,1.0,Real,2020-05-01 07:54:00,363213
+Queue Time,Makayla Jenkins,super admin,457.0,Real,2020-05-01 06:15:00,363157
+Queue Time,Nathan Van Orman,senior proposalist,2.0,Real,2020-05-01 16:56:00,364013
+Queue Time,Makayla Jenkins,super admin,73.0,Real,2020-05-01 06:43:00,363172
+Queue Time,Joseph Carlile,proposal qa,0.0,Real,2020-05-01 21:33:00,364195
