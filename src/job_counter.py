@@ -6,10 +6,10 @@ from tqdm import tqdm
 
 
 # Class which has all characteristics of a message
-class message_info:
+class MessageInfo:
     def __init__(self, message):
-        self.msg_full = re.sub('[^a-zA-Z0-9 \`\~\!\@\#\$\%\^\&\*\(\)\_\+\-\=\[\{\]\}\\\|\;\:\'\"\,\<\.\>\/\?\\n]*', "",
-                               message)
+        self.msg_full = re.sub('[^a-zA-Z0-9 \`\~\!\@\#\$\%\^\&\*\(\)\_\+\-\=\[\{\]\}\\\|\;\:\'\"\,\<\.\>\/\?\\n]*',
+                               "", message)
         reg_res = re.match("(.*) \((.*)\) - (.*)\\n(.*)", self.msg_full)
         if reg_res is not None:
             self.name = reg_res.group(1)
@@ -29,18 +29,19 @@ class message_info:
             self.time = "NA"
 
 
-# Class which classifies messages, and determins timings
-class message_timings:
+# Class which classifies messages, and determines timings
+class CountMessages:
     # Lists of notable titles
     props_titles = ["proposalist", "junior proposalist", "senior proposalist"]
     QA_titles = ["proposal qa", "super admin"]
 
     # Takes a message and its prior to determine what type it is
-    def classify_message(self, previous, msg):
+    @staticmethod
+    def classify_message(previous, msg):
         # Finds time type
         if msg.msg.find("URGENT CHECKED") != -1:
             msg.time = "Real"
-        elif previous.time == "NA":
+        elif previous.time == "NA" or previous.sub_type == "Archive" or previous.sub_type == "Sent":
             msg.time = "Standard"
         else:
             msg.time = previous.time
@@ -52,19 +53,16 @@ class message_timings:
         if msg.msg.find("Customer Archived") != -1:
             msg.type = "End"
             msg.sub_type = "Archive"
-            msg.time = "Standard"
             return
         # TYPE: end, QA
         if msg.msg.find("Proposal(s) Completed and needs QA") != -1:
             msg.type = "End"
-            msg.sub_type = "Archive"
-            msg.time = "Standard"
+            msg.sub_type = "QA"
             return
         # TYPE: end, sent
         if msg.msg.find("New Solar Proposal") != -1:
             msg.type = "End"
             msg.sub_type = "Sent"
-            msg.time = "Standard"
             return
 
         # REJECTION NOTES:
@@ -76,12 +74,12 @@ class message_timings:
 
         # RESPONSE NOTES:
         # TYPE: response, prop Response
-        if msg.title in message_timings.props_titles:
+        if msg.title in CountMessages.props_titles:
             msg.type = "Response"
             msg.sub_type = "Prop Response"
             return
         # TYPE: response, QA Response
-        if msg.title in message_timings.QA_titles:
+        if msg.title in CountMessages.QA_titles:
             msg.type = "Response"
             msg.sub_type = "QA Response"
             return
@@ -97,69 +95,41 @@ class message_timings:
         msg.sub_type = "Other"
         return
 
-    # Goes through the series of classified messages, and determines if there are any work time events
+    # Goes through the series of classified messages, and determines if there are any jobs sent or rejected
     def get_entries(self):
         entries = []
-        start = None
-        end = None
-        target = None
-
         i = 0
         while i < len(self.messages):
-            msg = self.messages[i]
-            if start is None:
-                if msg.type == "Request":
-                    start = msg
-                    target = "Response"
-                elif msg.type == "Response":
-                    start = msg
-                    target = "End"
-                elif msg.type == "Rejection":
-                    start = msg
-                    target = "End"
-            else:
-                if msg.type == target:
-                    end = msg
-                    entries.append(self.__create_entry__(start, end))
-                    if start.type == "Response":
-                        start = end = target = None
-                        continue
-                    start = end = target = None
+            message = self.messages[i]
+            if message.type == "Rejection" and message.sub_type == "Rejected":
+                entries.append(self.__create_entry__(message))
+            elif message.type == "End" and message.sub_type == "Sent":
+                entries.append(self.__create_entry__(message))
             i += 1
 
-        return (entries)
+        return entries
 
-    # Takes a start and end and creates a work time event
-    def __create_entry__(self, start, end):
-        if start.type == "Request" and end.type == "Response":
-            type = "Queue Time"
-        elif start.type == "Response" and end.type == "End":
-            type = "Prop Work Time"
-        elif start.type == "Rejection" and end.type == "End":
-            type = "Rejection Work Time"
-        else:
-            type = "Other"
-
-        diff = end.date - start.date
-        work_time = divmod(diff.total_seconds(), 60)[0]
-        time = start.time
-        name = end.name
-        title = end.title
-        id = self.customer_id
-        date = end.date
-        entry = {"Type":      type, "Name": name, "Title": title, "Work_Time": work_time,
-                 "Time_Type": time, "Date": date, "Customer_Id": id}
-        return (entry)
+    # Takes a message and creates an entry
+    def __create_entry__(self, message):
+        time = message.time
+        name = message.name
+        title = message.title
+        id_url = 'https://phx.gosolo.io/customer/' + str(self.customer_id)
+        date = message.date
+        type_ = message.sub_type
+        entry = {"Name": name, "Title": title, "Type": type_,
+                 "Time_Type": time, "Date_Time": date, "Customer_Id": id_url}
+        return entry
 
     # Takes a list series of messages and classifies them
     def __init__(self, messages, customer_id):
         self.messages = []
         self.customer_id = customer_id
         for msg in messages:
-            self.messages.append(message_info(msg))
+            self.messages.append(MessageInfo(msg))
         for i in range(len(self.messages)):
             if i == 0:
-                prev = message_info("")
+                prev = MessageInfo("")
             else:
                 prev = self.messages[i - 1]
             self.classify_message(prev, self.messages[i])
@@ -168,26 +138,26 @@ class message_timings:
 # Takes a customer id and returns a list of every message
 def get_messages(driver, customer_id):
     driver.get('https://phx.gosolo.io/customer/' + str(customer_id))
-    msg_elmt = driver.find_elements_by_xpath('//*[@id="sideNotes"]/div')
+    msg_elements = driver.find_elements_by_xpath('//*[@id="sideNotes"]/div')
     messages = []
-    for msg in msg_elmt:
+    for msg in msg_elements:
         messages.append(msg.text)
-    return (messages)
+    return messages
 
 
 # Is called first, will return a list of entries to put into the csv
 def create_entries(driver, customer_id):
-    # Gets notes section for the cutomer
+    # Gets notes section for the customer
     messages = get_messages(driver, customer_id)
     # Processes messages to get timings
-    timings = message_timings(messages, customer_id)
-    entries = timings.get_entries()
-    return (entries)
+    counts = CountMessages(messages, customer_id)
+    entries = counts.get_entries()
+    return entries
 
 
 # run functions goes through customers and creates a csv with time worked info
 def run(driver, file_in, file_out):
-    print("\nStarting work_time routine\n")
+    print("\nStarting job counting routine\n")
     sys.stdout.flush()
     driver.minimize_window()
 
@@ -195,7 +165,7 @@ def run(driver, file_in, file_out):
     f_in = open(file_in, "r", encoding="utf8")
     f_ut = open(file_out, "w")
     csv_in = csv.DictReader(f_in)
-    csv_ut = csv.DictWriter(f_ut, ["Type", "Name", "Title", "Work_Time", "Time_Type", "Date", "Customer_Id"])
+    csv_ut = csv.DictWriter(f_ut, ["Name", "Title", "Type", "Time_Type", "Date_Time", "Customer_Id"])
     csv_ut.writeheader()
 
     # Gets all ids first, so that we can have a progress bar

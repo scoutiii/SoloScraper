@@ -1,113 +1,104 @@
-Type,Name,Title,Work_Time,Time_Type,Date,Customer_Id
-Queue Time,Kysen Jackman,proposalist,1.0,Real,2020-03-24 09:29:00,334764
-Queue Time,Hyrum Parkin,proposalist,10.0,Real,2020-03-24 16:54:00,334764
-Queue Time,Lydia Carlile,proposal qa,2.0,Standard,2020-03-24 17:59:00,334764
-Queue Time,Devin McEwan,proposalist,0.0,Real,2020-04-18 12:17:00,351217
-Prop Work Time,Devin McEwan,proposalist,0.0,Real,2020-04-18 12:17:00,351217
-Queue Time,Lydia Carlile,proposal qa,2.0,Standard,2020-04-18 12:20:00,351217
-Queue Time,LeighAnn Coleman,super admin,23.0,Standard,2020-04-18 12:43:00,351217
-Prop Work Time,Rylee Johnson,proposalist,22796.0,Standard,2020-05-04 08:47:00,351217
-Queue Time,Charlize Payne,super admin,24.0,Real,2020-05-04 09:17:00,351217
-Queue Time,Jack Webb,super admin,22.0,Real,2020-05-04 09:59:00,351217
-Queue Time,Anna Shepherdson,senior proposalist,32.0,Real,2020-04-27 19:48:00,359279
-Prop Work Time,Anna Shepherdson,senior proposalist,2.0,Real,2020-04-27 20:49:00,359279
-Queue Time,Ryan Long,super admin,38.0,Standard,2020-05-04 09:54:00,359279
-Queue Time,Andrew Porcelli,super admin,12.0,Real,2020-05-04 10:09:00,359279
-Queue Time,Mackenzie Nelson,proposal qa,2706.0,Standard,2020-05-04 08:46:00,364606
-Prop Work Time,Mackenzie Nelson,proposal qa,2.0,Real,2020-05-04 08:49:00,364606
-Queue Time,Ryan Long,super admin,26.0,Real,2020-05-04 09:49:00,364606
-Queue Time,Amanda Curran,super admin,218.0,Standard,2020-05-02 16:42:00,364760
-Queue Time,Charlize Payne,super admin,23.0,Real,2020-05-03 17:44:00,364760
-Queue Time,Charlize Payne,super admin,873.0,Real,2020-05-04 08:50:00,364760
-Prop Work Time,Charlize Payne,super admin,0.0,Real,2020-05-04 08:51:00,364760
-Queue Time,Vitaliy Golling,proposalist,26.0,Real,2020-05-04 09:24:00,364760
-Queue Time,Ryan Long,super admin,38.0,Real,2020-05-04 10:02:00,364760
-Queue Time,Rylee Johnson,proposalist,2.0,Real,2020-05-04 10:30:00,364760
-Queue Time,Nathan Van Orman,senior proposalist,0.0,Real,2020-05-02 20:44:00,365115
-Prop Work Time,Nathan Van Orman,senior proposalist,0.0,Real,2020-05-02 20:46:00,365115
-Queue Time,Jack Webb,super admin,13.0,Standard,2020-05-04 10:19:00,365115
-Queue Time,Gabriel Schumacher,proposal qa,1.0,Real,2020-05-04 19:51:00,365115
-Queue Time,Vitaliy Golling,proposalist,92.0,Real,2020-05-04 06:33:00,365268
-Queue Time,Jack Webb,super admin,27.0,Real,2020-05-04 09:36:00,365422
-Queue Time,Jack Webb,super admin,29.0,Real,2020-05-04 09:43:00,365429
-Queue Time,Jack Webb,super admin,28.0,Real,2020-05-04 09:46:00,365438
-Prop Work Time,Jack Webb,super admin,0.0,Real,2020-05-04 09:47:00,365438
-Queue Time,Rylee Johnson,proposalist,15.0,Real,2020-05-04 10:05:00,365438
-Queue Time,Dominic Bentil,proposal qa,8.0,Real,2020-05-04 10:18:00,365438
-Prop Work Time,Dominic Bentil,proposal qa,0.0,Real,2020-05-04 10:23:00,365438
-Queue Time,Dominic Bentil,proposal qa,3.0,Real,2020-05-06 10:18:00,365438
-Rejection Work Time,Dominic Bentil,proposal qa,12.0,Standard,2020-05-06 10:46:00,365438
-Rejection Work Time,Dominic Bentil,proposal qa,2.0,Standard,2020-05-06 10:54:00,365438
-Prop Work Time,Dominic Bentil,proposal qa,7.0,Standard,2020-05-06 11:02:00,365438
-Queue Time,Jack Webb,super admin,26.0,Real,2020-05-04 09:48:00,365447
-Queue Time,Charlize Payne,super admin,12.0,Real,2020-05-04 10:09:00,365447
-Rejection Work Time,Charlize Payne,super admin,2.0,Real,2020-05-04 10:11:00,365447
-Queue Time,Anna Shepherdson,senior proposalist,273.0,Standard,2020-05-04 14:46:00,365447
-Queue Time,Jack Webb,super admin,27.0,Real,2020-05-04 09:51:00,365452
-Queue Time,Mackenzie Nelson,proposal qa,3.0,Standard,2020-05-04 10:55:00,365452
-Rejection Work Time,Mackenzie Nelson,proposal qa,7.0,Standard,2020-05-04 11:09:00,365452
-Prop Work Time,Braedan Beecher,super admin,1.0,Standard,2020-05-04 11:11:00,365452
-Queue Time,Jack Webb,super admin,28.0,Real,2020-05-04 09:54:00,365456
-Queue Time,Trevor Miller,proposal qa,11.0,Real,2020-05-04 10:11:00,365456
-Queue Time,Jack Webb,super admin,26.0,Real,2020-05-04 09:57:00,365464
-Queue Time,Dominic Bentil,proposal qa,5.0,Real,2020-05-04 11:13:00,365464
-Queue Time,Dominic Bentil,proposal qa,3.0,Real,2020-05-04 11:17:00,365464
-Queue Time,Tristin Hofheins,proposal qa,8.0,Real,2020-05-04 11:38:00,365464
-Rejection Work Time,Tristin Hofheins,proposal qa,0.0,Real,2020-05-04 11:39:00,365464
-Queue Time,Jack Webb,super admin,15.0,Real,2020-05-04 10:04:00,365476
-Queue Time,Jack Webb,super admin,10.0,Real,2020-05-04 10:11:00,365490
-Queue Time,Jack Webb,super admin,7.0,Real,2020-05-04 10:15:00,365503
-Queue Time,Richard Upshaw,proposalist,4.0,Standard,2020-05-04 12:19:00,365696
-Rejection Work Time,Richard Upshaw,proposalist,5.0,Standard,2020-05-04 12:30:00,365696
-Queue Time,Dominic Bentil,proposal qa,3.0,Real,2020-05-04 12:57:00,365696
-Queue Time,Trevor Miller,proposal qa,1.0,Real,2020-05-04 13:17:00,365843
-Queue Time,Dominic Bentil,proposal qa,4.0,Real,2020-05-04 13:25:00,365843
-Queue Time,Dominic Bentil,proposal qa,2.0,Real,2020-05-04 14:00:00,365931
-Queue Time,Gabriel Schumacher,proposal qa,3.0,Real,2020-05-04 14:59:00,365931
-Queue Time,Jack Webb,super admin,6.0,Real,2020-05-05 08:33:00,366670
-Rejection Work Time,Jack Webb,super admin,4.0,Standard,2020-05-05 08:47:00,366670
-Queue Time,Jack Webb,super admin,9.0,Standard,2020-05-05 08:41:00,366677
-Queue Time,Dominic Bentil,proposal qa,2.0,Real,2020-05-05 16:52:00,366677
-Queue Time,Wesley Musselman,super admin,3.0,Real,2020-05-05 10:23:00,366837
-Prop Work Time,Bailey Lawson,proposal qa,12.0,Real,2020-05-09 11:42:00,366837
-Prop Work Time,Mike Starks,super admin,1.0,Real,2020-05-05 11:41:00,366964
-Prop Work Time,Mike Starks,super admin,6.0,Real,2020-05-05 12:00:00,366995
-Prop Work Time,Charlize Payne,super admin,2.0,Real,2020-05-05 12:05:00,367009
-Prop Work Time,Charlize Payne,super admin,2.0,Real,2020-05-05 12:16:00,367033
-Queue Time,Dominic Bentil,proposal qa,3.0,Real,2020-05-05 13:54:00,367230
-Queue Time,Maegen Nelson,proposal qa,1619.0,Standard,2020-05-07 16:08:00,368579
-Queue Time,Benjamin Miller,proposal qa,20.0,Real,2020-05-07 16:36:00,368579
-Queue Time,Anna Shepherdson,senior proposalist,418.0,Standard,2020-05-06 20:47:00,368635
-Queue Time,Gabriel Schumacher,proposal qa,3.0,Real,2020-05-06 14:48:00,368777
-Queue Time,Tristin Hofheins,proposal qa,3.0,Real,2020-05-07 10:34:00,368777
-Prop Work Time,Tristin Hofheins,proposal qa,0.0,Real,2020-05-07 10:37:00,368777
-Queue Time,Kassi Porcelli,proposal qa,128.0,Standard,2020-05-07 12:54:00,368777
-Queue Time,Dominic Bentil,proposal qa,1.0,Real,2020-05-06 14:54:00,368791
-Queue Time,Solo Admin,super admin,12486.0,Standard,2020-06-12 11:44:00,368791
-Queue Time,Dominic Bentil,proposal qa,2.0,Real,2020-05-07 11:33:00,369928
-Rejection Work Time,Dominic Bentil,proposal qa,5.0,Standard,2020-05-07 11:44:00,369928
-Queue Time,Gabriel Schumacher,proposal qa,3.0,Real,2020-05-09 15:09:00,372931
-Queue Time,Ryan Sturzenegger,senior proposalist,56.0,Standard,2020-05-11 10:19:00,373438
-Queue Time,Isaac Webb,proposal qa,333.0,Standard,2020-05-11 18:51:00,373960
-Queue Time,Anna Shepherdson,senior proposalist,36.0,Real,2020-05-11 19:30:00,373960
-Queue Time,Ryan Sturzenegger,senior proposalist,56.0,Real,2020-05-12 17:26:00,373960
-Queue Time,Kassi Porcelli,proposal qa,2.0,Real,2020-05-12 19:54:00,373960
-Prop Work Time,Kassi Porcelli,proposal qa,0.0,Real,2020-05-12 19:56:00,373960
-Queue Time,Lydia Carlile,proposal qa,6.0,Real,2020-05-12 12:38:00,375284
-Queue Time,Maegen Nelson,proposal qa,2.0,Real,2020-05-13 11:10:00,375284
-Prop Work Time,Maegen Nelson,proposal qa,0.0,Real,2020-05-13 11:12:00,375284
-Queue Time,Dominic Bentil,proposal qa,1.0,Real,2020-05-13 12:12:00,375284
-Queue Time,Trevor Miller,proposal qa,2.0,Real,2020-05-14 14:22:00,375284
-Queue Time,Solo Admin,super admin,1817.0,Real,2020-05-22 17:20:00,375284
-Queue Time,Richard Upshaw,proposalist,22.0,Real,2020-05-12 16:41:00,375885
-Prop Work Time,Richard Upshaw,proposalist,1.0,Real,2020-05-12 16:42:00,375885
-Queue Time,Anna Shepherdson,senior proposalist,10.0,Real,2020-05-12 17:33:00,375885
-Queue Time,Merritt Fielding,proposalist,1.0,Real,2020-05-13 11:07:00,375885
-Queue Time,Dominic Bentil,proposal qa,1.0,Real,2020-05-13 12:05:00,375885
-Queue Time,Lydia Carlile,proposal qa,1.0,Real,2020-05-14 11:50:00,375885
-Queue Time,Anna Shepherdson,senior proposalist,5.0,Real,2020-05-22 13:24:00,375885
-Prop Work Time,Anna Shepherdson,senior proposalist,0.0,Real,2020-05-22 13:26:00,375885
-Queue Time,Joseph Carlile,proposal qa,18.0,Real,2020-05-22 17:06:00,375885
-Queue Time,Brady Summers,proposal qa,3.0,Real,2020-05-26 08:44:00,375885
-Prop Work Time,Brady Summers,proposal qa,0.0,Real,2020-05-26 08:52:00,375885
-Queue Time,Andrew Porcelli,super admin,4.0,Real,2020-05-26 10:23:00,375885
+Name,Title,Type,Time_Type,Date_Time,Customer_Id
+Berry Echols,proposal qa,Sent,Real,2020-03-24 09:33:00,https://phx.gosolo.io/customer/334764
+Braedan Beecher,super admin,Sent,Standard,2020-03-24 09:34:00,https://phx.gosolo.io/customer/334764
+Dan Bodily,super admin,Sent,Real,2020-05-04 10:02:00,https://phx.gosolo.io/customer/334764
+Holly Laing,super admin,Sent,Real,2020-04-18 12:45:00,https://phx.gosolo.io/customer/351217
+Dan Bodily,super admin,Sent,Real,2020-05-04 10:04:00,https://phx.gosolo.io/customer/351217
+Micah Wilson,proposal qa,Sent,Real,2020-04-27 21:30:00,https://phx.gosolo.io/customer/359279
+Dan Bodily,super admin,Sent,Real,2020-05-04 10:00:00,https://phx.gosolo.io/customer/359279
+Devin Hurst,proposal qa,Sent,Real,2020-05-04 10:22:00,https://phx.gosolo.io/customer/359279
+Micah Wilson,proposal qa,Sent,Standard,2020-05-02 15:11:00,https://phx.gosolo.io/customer/364606
+Dan Bodily,super admin,Sent,Real,2020-05-04 09:53:00,https://phx.gosolo.io/customer/364606
+Isaac Webb,super admin,Rejected,Standard,2020-05-02 16:30:00,https://phx.gosolo.io/customer/364760
+Jacob Yada,super admin,Sent,Real,2020-05-03 18:23:00,https://phx.gosolo.io/customer/364760
+Cody Wheeler,super admin,Sent,Real,2020-05-04 09:28:00,https://phx.gosolo.io/customer/364760
+Dan Bodily,super admin,Sent,Real,2020-05-04 10:06:00,https://phx.gosolo.io/customer/364760
+Nate Dunham,super admin,Sent,Real,2020-05-04 10:37:00,https://phx.gosolo.io/customer/364760
+Micah Wilson,proposal qa,Sent,Real,2020-05-02 15:14:00,https://phx.gosolo.io/customer/364877
+Dan Bodily,super admin,Sent,Real,2020-05-04 10:25:00,https://phx.gosolo.io/customer/365115
+Isaac Webb,super admin,Sent,Real,2020-05-04 19:56:00,https://phx.gosolo.io/customer/365115
+Alandra Finneman,super admin,Sent,Real,2020-05-04 07:03:00,https://phx.gosolo.io/customer/365268
+Dan Bodily,super admin,Sent,Real,2020-05-04 10:09:00,https://phx.gosolo.io/customer/365268
+Braedan Beecher,super admin,Sent,Real,2020-05-04 09:44:00,https://phx.gosolo.io/customer/365422
+Dan Bodily,super admin,Sent,Real,2020-05-04 09:47:00,https://phx.gosolo.io/customer/365429
+Braedan Beecher,super admin,Sent,Real,2020-05-04 10:32:00,https://phx.gosolo.io/customer/365438
+Alandra Finneman,super admin,Rejected,Real,2020-05-06 10:34:00,https://phx.gosolo.io/customer/365438
+Berry Echols,proposal qa,Rejected,Real,2020-05-06 10:52:00,https://phx.gosolo.io/customer/365438
+Annabelle McCrary,proposal qa,Rejected,Real,2020-05-06 10:57:00,https://phx.gosolo.io/customer/365438
+Braedan Beecher,super admin,Sent,Real,2020-05-06 11:07:00,https://phx.gosolo.io/customer/365438
+Dan Bodily,super admin,Sent,Real,2020-05-04 09:52:00,https://phx.gosolo.io/customer/365447
+Charlize Payne,super admin,Rejected,Real,2020-05-04 10:09:00,https://phx.gosolo.io/customer/365447
+Dan Bodily,super admin,Sent,Real,2020-05-04 10:12:00,https://phx.gosolo.io/customer/365447
+Dan Bodily,super admin,Sent,Real,2020-05-04 10:00:00,https://phx.gosolo.io/customer/365452
+Dan Bodily,super admin,Sent,Standard,2020-05-04 10:00:00,https://phx.gosolo.io/customer/365452
+Devin Hurst,proposal qa,Rejected,Real,2020-05-04 11:02:00,https://phx.gosolo.io/customer/365452
+Braedan Beecher,super admin,Sent,Real,2020-05-04 11:11:00,https://phx.gosolo.io/customer/365452
+Dan Bodily,super admin,Sent,Real,2020-05-04 09:59:00,https://phx.gosolo.io/customer/365456
+Dan Bodily,super admin,Sent,Real,2020-05-04 10:01:00,https://phx.gosolo.io/customer/365464
+Tristin Hofheins,super admin,Rejected,Real,2020-05-04 11:39:00,https://phx.gosolo.io/customer/365464
+Alandra Finneman,super admin,Sent,Real,2020-05-04 11:57:00,https://phx.gosolo.io/customer/365464
+Dan Bodily,super admin,Sent,Real,2020-05-04 10:09:00,https://phx.gosolo.io/customer/365476
+Dan Bodily,super admin,Sent,Real,2020-05-04 10:15:00,https://phx.gosolo.io/customer/365490
+Dan Bodily,super admin,Sent,Real,2020-05-04 10:18:00,https://phx.gosolo.io/customer/365503
+Devin Hurst,proposal qa,Rejected,Real,2020-05-04 12:25:00,https://phx.gosolo.io/customer/365696
+Alandra Finneman,super admin,Sent,Real,2020-05-04 12:34:00,https://phx.gosolo.io/customer/365696
+Devin Hurst,proposal qa,Sent,Real,2020-05-04 13:13:00,https://phx.gosolo.io/customer/365696
+Cody Wheeler,super admin,Sent,Real,2020-05-04 13:34:00,https://phx.gosolo.io/customer/365843
+Devin Hurst,proposal qa,Sent,Real,2020-05-04 14:12:00,https://phx.gosolo.io/customer/365931
+Reggie Northrup,proposal qa,Sent,Real,2020-05-04 15:07:00,https://phx.gosolo.io/customer/365931
+Maddie Miller,proposal qa,Rejected,Real,2020-05-05 08:43:00,https://phx.gosolo.io/customer/366670
+Berry Echols,proposal qa,Sent,Real,2020-05-05 08:50:00,https://phx.gosolo.io/customer/366670
+Berry Echols,proposal qa,Sent,Real,2020-05-05 08:57:00,https://phx.gosolo.io/customer/366677
+William Urban,super admin,Sent,Real,2020-05-05 16:57:00,https://phx.gosolo.io/customer/366677
+Berry Echols,proposal qa,Sent,Real,2020-05-05 10:31:00,https://phx.gosolo.io/customer/366837
+Berry Echols,proposal qa,Sent,Standard,2020-05-05 10:31:00,https://phx.gosolo.io/customer/366837
+Bailey Lawson,proposal qa,Rejected,Real,2020-05-09 11:38:00,https://phx.gosolo.io/customer/366837
+Bailey Lawson,proposal qa,Rejected,Real,2020-05-09 11:42:00,https://phx.gosolo.io/customer/366837
+Maddie Miller,proposal qa,Sent,Real,2020-05-09 11:46:00,https://phx.gosolo.io/customer/366837
+Maddie Miller,proposal qa,Sent,Standard,2020-05-09 11:46:00,https://phx.gosolo.io/customer/366837
+Mike Starks,super admin,Sent,Standard,2020-05-05 11:49:00,https://phx.gosolo.io/customer/366964
+Mike Starks,super admin,Sent,Real,2020-05-05 12:00:00,https://phx.gosolo.io/customer/366995
+Mike Starks,super admin,Sent,Standard,2020-05-05 12:10:00,https://phx.gosolo.io/customer/367009
+Mike Starks,super admin,Sent,Standard,2020-05-05 12:28:00,https://phx.gosolo.io/customer/367033
+Cody Wheeler,super admin,Sent,Real,2020-05-05 13:58:00,https://phx.gosolo.io/customer/367230
+Braedan Beecher,super admin,Sent,Standard,2020-05-06 12:16:00,https://phx.gosolo.io/customer/368214
+Cody Wheeler,super admin,Sent,Standard,2020-05-06 12:16:00,https://phx.gosolo.io/customer/368215
+Makayla Jenkins,super admin,Rejected,Standard,2020-05-06 12:16:00,https://phx.gosolo.io/customer/368215
+Braedan Beecher,super admin,Sent,Standard,2020-05-06 12:20:00,https://phx.gosolo.io/customer/368216
+Reggie Northrup,proposal qa,Sent,Standard,2020-05-06 21:05:00,https://phx.gosolo.io/customer/368478
+Kiley Young,proposal qa,Sent,Standard,2020-05-06 21:27:00,https://phx.gosolo.io/customer/368503
+Reggie Northrup,proposal qa,Sent,Standard,2020-05-06 21:29:00,https://phx.gosolo.io/customer/368507
+Reggie Northrup,proposal qa,Sent,Standard,2020-05-06 21:46:00,https://phx.gosolo.io/customer/368539
+Aaron Larsen,proposal qa,Sent,Real,2020-05-06 19:01:00,https://phx.gosolo.io/customer/368579
+Annabelle McCrary,proposal qa,Sent,Real,2020-05-07 16:14:00,https://phx.gosolo.io/customer/368579
+Micah Wilson,proposal qa,Sent,Real,2020-05-07 16:49:00,https://phx.gosolo.io/customer/368579
+Kiley Young,proposal qa,Sent,Real,2020-05-06 20:20:00,https://phx.gosolo.io/customer/368635
+Kiley Young,proposal qa,Sent,Real,2020-05-06 20:38:00,https://phx.gosolo.io/customer/368635
+Aaron Larsen,proposal qa,Sent,Real,2020-05-06 20:49:00,https://phx.gosolo.io/customer/368635
+Kiley Young,proposal qa,Sent,Real,2020-05-06 14:54:00,https://phx.gosolo.io/customer/368777
+Braedan Beecher,super admin,Sent,Real,2020-05-06 15:00:00,https://phx.gosolo.io/customer/368791
+McKenzie Miller,super admin,Sent,Standard,2020-05-07 00:01:00,https://phx.gosolo.io/customer/369167
+Holly Laing,super admin,Sent,Real,2020-05-12 17:08:00,https://phx.gosolo.io/customer/369167
+Annabelle McCrary,proposal qa,Rejected,Real,2020-05-07 11:39:00,https://phx.gosolo.io/customer/369928
+Annabelle McCrary,proposal qa,Sent,Real,2020-05-07 11:45:00,https://phx.gosolo.io/customer/369928
+Aaron Larsen,proposal qa,Sent,Real,2020-05-09 15:19:00,https://phx.gosolo.io/customer/372931
+Devin Hurst,proposal qa,Sent,Standard,2020-05-11 15:02:00,https://phx.gosolo.io/customer/373438
+Aaron Larsen,proposal qa,Sent,Real,2020-05-12 17:01:00,https://phx.gosolo.io/customer/373438
+Aaron Larsen,proposal qa,Rejected,Standard,2020-05-11 21:11:00,https://phx.gosolo.io/customer/373939
+Wesley Musselman,super admin,Sent,Standard,2020-05-11 22:56:00,https://phx.gosolo.io/customer/373939
+Aaron Larsen,proposal qa,Sent,Real,2020-05-12 16:57:00,https://phx.gosolo.io/customer/373939
+Isaac Webb,super admin,Sent,Real,2020-05-11 18:52:00,https://phx.gosolo.io/customer/373960
+Holly Laing,super admin,Sent,Real,2020-05-12 17:11:00,https://phx.gosolo.io/customer/373960
+Holly Laing,super admin,Sent,Standard,2020-05-11 21:37:00,https://phx.gosolo.io/customer/374031
+Isaac Webb,super admin,Sent,Real,2020-05-12 17:06:00,https://phx.gosolo.io/customer/374031
+Isaac Webb,super admin,Sent,Real,2020-05-12 12:49:00,https://phx.gosolo.io/customer/375284
+Annabelle McCrary,proposal qa,Sent,Real,2020-05-13 12:17:00,https://phx.gosolo.io/customer/375284
+Annabelle McCrary,proposal qa,Sent,Real,2020-05-14 14:30:00,https://phx.gosolo.io/customer/375284
+Makayla Jenkins,super admin,Sent,Real,2020-05-21 11:09:00,https://phx.gosolo.io/customer/375284
+Reggie Northrup,proposal qa,Sent,Real,2020-05-12 18:05:00,https://phx.gosolo.io/customer/375885
+Devin Hurst,proposal qa,Sent,Real,2020-05-13 11:12:00,https://phx.gosolo.io/customer/375885
+Devin Hurst,proposal qa,Sent,Real,2020-05-13 12:13:00,https://phx.gosolo.io/customer/375885
+Jacob Yada,super admin,Sent,Real,2020-05-14 11:59:00,https://phx.gosolo.io/customer/375885
+Micah Wilson,proposal qa,Sent,Real,2020-05-22 17:14:00,https://phx.gosolo.io/customer/375885
+Kiley Young,proposal qa,Sent,Real,2020-05-26 09:01:00,https://phx.gosolo.io/customer/375885
+Cody Wheeler,super admin,Sent,Real,2020-05-26 10:32:00,https://phx.gosolo.io/customer/375885
